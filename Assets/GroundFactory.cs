@@ -16,7 +16,8 @@ public class GroundFactory : MonoBehaviour {
 
 	public void GenerateNextGround(Vector3 previous) {
 	//	groundFactory
-		GroundPartScript ground = Instantiate(groundParts[0], previous + Vector3.right * 11f, transform.rotation) as GroundPartScript;
+		int random = Random.Range(0, groundParts.Length);
+		GroundPartScript ground = Instantiate(groundParts[random], previous + Vector3.right * 11f, transform.rotation) as GroundPartScript;
 
 	
 	}
