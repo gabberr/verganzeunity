@@ -416,6 +416,9 @@ MonoBehaviour:
   standHight: 2
   speedBoost: 1
   shots: {fileID: 1676500246}
+  camZOOMFactor: 6
+  badGuyReference: {fileID: 1340070672}
+  cameraReference: {fileID: 759524420}
 --- !u!23 &798975017
 Renderer:
   m_ObjectHideFlags: 0
