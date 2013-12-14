@@ -108,6 +108,9 @@ public class CharacterControll : MonoBehaviour {
 			tequilaShots = tequilaShots + 1;
 		}
 	}
+
+
+
 	void Tequila()
 	{
 		if (speedBoosted == true) {
@@ -118,7 +121,7 @@ public class CharacterControll : MonoBehaviour {
 				speedTimer = 2f;
 			}
 		}
-		if (Input.GetKeyDown (KeyCode.X)) {
+		if (Input.GetKeyDown (KeyCode.X) && speedBoosted == false) {
 			
 			if(tequilaShots > 0)
 			{
