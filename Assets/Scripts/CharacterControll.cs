@@ -29,20 +29,19 @@ public class CharacterControll : MonoBehaviour {
 	private float previousCharacterDistance;
 	private float currentCharacterDistance;
 	
-	/*fields for controlling the camera's zoom
+	//fields for controlling the camera's zoom
 	public float camZOOMFactor = 6f;
 	
-	/*references to other game objects
+	//references to other game objects
 	public GameObject badGuyReference;
 	public Camera cameraReference;
-	*/
 
 	//game Start game Over
-
+	public float gameOverDistance;
 
 	
 	void Start(){
-
+		gameOverDistance = 25;
 	}
 
 	/*void FixedUpdate() {
@@ -52,6 +51,7 @@ public class CharacterControll : MonoBehaviour {
 
 
 	void  Update (){
+		checkGameOver();
 
 		shots.guiText.text = "Tequila: " + tequilaShots;
 		CharacterController controller = GetComponent<CharacterController>();
@@ -79,7 +79,6 @@ public class CharacterControll : MonoBehaviour {
 
 		// collecting and using tequila shots
 		Tequila ();
-
 
 
 		/*previousCharacterDistance = Vector3.Distance(transform.position, badGuyReference.transform.position);
@@ -130,6 +129,15 @@ public class CharacterControll : MonoBehaviour {
 				tequilaShots = tequilaShots - 1;
 			}
 			
+		}
+	}
+
+
+	void checkGameOver(){
+		currentCharacterDistance = Vector3.Distance(transform.position, badGuyReference.transform.position);
+		print("current dist: "+currentCharacterDistance);
+		if(currentCharacterDistance > gameOverDistance){
+			print("Game over dist: "+currentCharacterDistance + "(> "+gameOverDistance+")");
 		}
 	}
 
