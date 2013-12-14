@@ -9,8 +9,8 @@ public class CharacterControll : MonoBehaviour {
 	//jump and crouch variables
 	CharacterController controller;
 	public float speed = 7f;
-	public float gravity = 10f;
-	public float jumpSpeed = 3f;
+	public float gravity = 9f;
+	public float jumpSpeed = 7f;
 	private Vector2 moveDirection = Vector2.zero;
 	public float doubleJumpSpeed = 2f;
 	public float crouchHeight = 1f;
@@ -29,20 +29,20 @@ public class CharacterControll : MonoBehaviour {
 	private float previousCharacterDistance;
 	private float currentCharacterDistance;
 	
-	//fields for controlling the camera's zoom
+	/*fields for controlling the camera's zoom
 	public float camZOOMFactor = 6f;
 	
-	//references to other game objects
+	/*references to other game objects
 	public GameObject badGuyReference;
 	public Camera cameraReference;
-
+	*/
 
 	//game Start game Over
 
 
 	
 	void Start(){
-		print (cameraReference.orthographicSize);
+
 	}
 
 	/*void FixedUpdate() {
@@ -52,7 +52,7 @@ public class CharacterControll : MonoBehaviour {
 
 
 	void  Update (){
-		print (cameraReference.orthographicSize);
+
 		shots.guiText.text = "Tequila: " + tequilaShots;
 		CharacterController controller = GetComponent<CharacterController>();
 
