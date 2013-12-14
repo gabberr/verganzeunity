@@ -8,11 +8,12 @@ public class BadGuyObstacleSpawner : MonoBehaviour {
 	public float bulletSpeed = 15f;
 	private Vector2 moveDirection = Vector2.zero;
 
-	float minThrowForce = 100f;
-	float maxThrowForce = 200f;
+	GameObject player;
+	
 	// Use this for initialization
 	void Start () {
-	
+		player = GameObject.Find("Player");
+		print(player);
 	}
 	
 	// Update is called once per frame
@@ -21,14 +22,12 @@ public class BadGuyObstacleSpawner : MonoBehaviour {
 
 			int ori = Random.Range(0,obstacles.Length);
 
-			GameObject obs = Instantiate(obstacles[ori], transform.position + Vector3.left * 1, transform.rotation) as GameObject;
+			Obstacle obs = Instantiate(obstacles[ori], transform.position - Vector3.left * 15, transform.rotation) as Obstacle;
+		//	obs.player = player;
+		//	obs.add
 		//	obs.rigidbody.AddForce(Vector3.up * Random.Range(minThrowForce,maxThrowForce  ));
 
 		//	iTween.MoveAdd(obs.transform.gameObject, iTween.Hash("ammount", transform.position, "easeType", "easeInOutExpo", "delay", .1));
-
-
-
-
 
 		//	iTween.MoveAdd(obs.transform.gameObject, iTween.Hash("y", -2, "easeType", "easeInOutExpo", "delay", .2));
 
