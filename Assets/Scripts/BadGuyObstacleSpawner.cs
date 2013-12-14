@@ -21,8 +21,10 @@ public class BadGuyObstacleSpawner : MonoBehaviour {
 
 			int ori = Random.Range(0,obstacles.Length);
 
-			GameObject obs = Instantiate(obstacles[ori], transform.position + Vector3.up * 1, transform.rotation) as GameObject;
-			obs.rigidbody.AddForce(Vector3.up * Random.Range(minThrowForce,maxThrowForce  ));
+			GameObject obs = Instantiate(obstacles[ori], transform.position + Vector3.left * 1, transform.rotation) as GameObject;
+		//	obs.rigidbody.AddForce(Vector3.up * Random.Range(minThrowForce,maxThrowForce  ));
+			obs.transform.Translate(Vector3.up * 1f * Time.deltaTime);
+
 
 		    }
 		if (Input.GetKeyDown(KeyCode.L)) {
