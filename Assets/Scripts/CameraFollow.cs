@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Follow : MonoBehaviour {
+public class CameraFollow : MonoBehaviour {
 	
 	public float dampTime = 0.05f;
 	private Vector3 velocity = Vector3.zero;
