@@ -23,7 +23,16 @@ public class BadGuyObstacleSpawner : MonoBehaviour {
 
 			GameObject obs = Instantiate(obstacles[ori], transform.position + Vector3.left * 1, transform.rotation) as GameObject;
 		//	obs.rigidbody.AddForce(Vector3.up * Random.Range(minThrowForce,maxThrowForce  ));
-			obs.transform.Translate(Vector3.up * 1f * Time.deltaTime);
+
+		//	iTween.MoveAdd(obs.transform.gameObject, iTween.Hash("ammount", transform.position, "easeType", "easeInOutExpo", "delay", .1));
+
+
+
+
+
+		//	iTween.MoveAdd(obs.transform.gameObject, iTween.Hash("y", -2, "easeType", "easeInOutExpo", "delay", .2));
+
+		//	obs.transform.Translate(Vector3.up * 1f * Time.deltaTime);
 
 
 		    }
@@ -39,4 +48,9 @@ public class BadGuyObstacleSpawner : MonoBehaviour {
 		// CoinController coinnnn = clone.transform.Find("Coin").GetComponent<CoinController>();
 	
 	}
+
+
+
+
+
 }

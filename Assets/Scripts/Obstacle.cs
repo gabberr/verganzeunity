@@ -5,7 +5,14 @@ public class Obstacle : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		//iTween.moveTo(gameObject, {"z":-11.5, "time": 2, "transition":"easeInOutExpo", "onComplete":"Rotate1" });    
+
+
+		iTween.MoveAdd(transform.gameObject, iTween.Hash("y", 2,"time",0.5f, "easeType", "easeOutQuad", "onComplete","Rotate1"));
+	}
 	
+	void Rotate1(){
+		iTween.MoveAdd(transform.gameObject, iTween.Hash("y", -2,"time",0.5f, "easeType", "easeInQuad"));
 	}
 	
 	// Update is called once per frame
@@ -31,6 +38,8 @@ public class Obstacle : MonoBehaviour {
 			Debug.Log(other.gameObject);
 		
 	}
+
+
 
 
 }
