@@ -18,11 +18,12 @@ public class CharacterControll : MonoBehaviour {
 	bool  isCrouched = false;
 
 	//Tequila speed boost
-	public float speedBoost = 3f;
+	public float speedBoost = 1f;
 	private int tequilaShots;
 	public GUIText shots;
 	bool speedBoosted = false;
 	float speedTimer = 2f;
+
 
 	//fields for determing the characters moving direction
 	private float previousCharacterDistance;
@@ -44,10 +45,10 @@ public class CharacterControll : MonoBehaviour {
 		print (cameraReference.orthographicSize);
 	}
 
-	void FixedUpdate() {
+	/*void FixedUpdate() {
 		currentCharacterDistance = Vector3.Distance(transform.position, badGuyReference.transform.position);
 
-	}
+	}*/
 
 
 	void  Update (){
@@ -60,7 +61,7 @@ public class CharacterControll : MonoBehaviour {
 		moveDirection.y -= gravity * Time.deltaTime;
 		controller.Move(moveDirection * Time.deltaTime);
 
-			if (Input.GetKeyDown(KeyCode.Space) && isCrouched == false && controller.isGrounded)
+		if (Input.GetKeyDown(KeyCode.Space) && isCrouched == false && controller.isGrounded)
 			{
 				moveDirection.y = jumpSpeed;
 						
@@ -76,26 +77,12 @@ public class CharacterControll : MonoBehaviour {
 				isCrouched = false;
 			}
 
-		if (speedBoosted == true) {
-			speedTimer -= Time.deltaTime;
-			if(speedTimer <= Time.deltaTime){
-				speedBoosted = false;
-				speed = speed - 3;
-			}
-				}
+		// collecting and using tequila shots
+		Tequila ();
 
-		if (Input.GetKeyDown (KeyCode.X)) {
 
-			if(tequilaShots > 0)
-			{
-				speedBoosted = true;
-				speed = speed + 3f;
-				tequilaShots = tequilaShots - 1;
-			}
-				
-		}
 
-		previousCharacterDistance = Vector3.Distance(transform.position, badGuyReference.transform.position);
+		/*previousCharacterDistance = Vector3.Distance(transform.position, badGuyReference.transform.position);
 		
 		if(currentCharacterDistance - previousCharacterDistance > 0){
 			//the player is moving to the right direction
@@ -112,7 +99,7 @@ public class CharacterControll : MonoBehaviour {
 			//cameraReference.orthographicSize = cameraReference.orthographicSize * (currentCharacterDistance/camZOOMFactor);
 			//cameraReference.transform.transform.Translate(-Vector3.forward * (currentCharacterDistance/camZOOMFactor) * Time.deltaTime);
 		}
-
+*/
 }
 	void OnTriggerEnter(Collider other)
 	{
@@ -121,7 +108,27 @@ public class CharacterControll : MonoBehaviour {
 			tequilaShots = tequilaShots + 1;
 		}
 	}
-
+	void Tequila()
+	{
+		if (speedBoosted == true) {
+			speedTimer -= Time.deltaTime;
+			if(speedTimer <= 0){
+				speedBoosted = false;
+				speed = speed - speedBoost;
+				speedTimer = 2f;
+			}
+		}
+		if (Input.GetKeyDown (KeyCode.X)) {
+			
+			if(tequilaShots > 0)
+			{
+				speedBoosted = true;
+				speed = speed + speedBoost;
+				tequilaShots = tequilaShots - 1;
+			}
+			
+		}
+	}
 
 }
 
