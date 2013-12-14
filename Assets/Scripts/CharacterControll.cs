@@ -67,12 +67,12 @@ public class CharacterControll : MonoBehaviour {
 						
 			}
 		if (Input.GetKeyDown (KeyCode.LeftControl)) {
-					controller.center = new Vector2(0, 0);
+					controller.center = new Vector2(0, -0.3f);
 					controller.height = crouchHeight;
 					isCrouched = true;
 				}
 		if (Input.GetKeyUp (KeyCode.LeftControl) && isCrouched == true){
-				controller.center = new Vector2(0, 0.5f);
+				controller.center = new Vector2(0, 0.2f);
 			   	controller.height = standHight;
 				isCrouched = false;
 			}

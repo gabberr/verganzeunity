@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 83e32ee57336a384494a8352dae43fca
+guid: 732e7bf877aad574eb8c618f338efae8
 TextureImporter:
   serializedVersion: 2
   mipmaps:
@@ -21,7 +21,7 @@ TextureImporter:
   generateCubemap: 0
   seamlessCubemap: 0
   textureFormat: -1
-  maxTextureSize: 1024
+  maxTextureSize: 512
   textureSettings:
     filterMode: -1
     aniso: 1
@@ -41,50 +41,32 @@ TextureImporter:
   buildTargetSettings: []
   spriteSheet:
     sprites:
-    - name: goodguy_running_0
+    - name: goodguy_jump_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 364.429993
+        width: 365
         height: 500
       alignment: 0
-      pivot: {x: .5, y: .5}
-    - name: goodguy_running_1
+      pivot: {x: 0, y: 0}
+    - name: goodguy_jump_2
       rect:
         serializedVersion: 2
-        x: 407
-        y: 0
-        width: 367
-        height: 500
+        x: 408
+        y: 21
+        width: 366
+        height: 479
       alignment: 0
       pivot: {x: .5, y: .5}
-    - name: goodguy_running_2
+    - name: goodguy_jump_3
       rect:
         serializedVersion: 2
         x: 817
         y: 0
-        width: 366
+        width: 365
         height: 500
       alignment: 0
-      pivot: {x: .5, y: .5}
-    - name: goodguy_running_3
-      rect:
-        serializedVersion: 2
-        x: 1226
-        y: 0
-        width: 367
-        height: 500
-      alignment: 0
-      pivot: {x: .5, y: .5}
-    - name: goodguy_running_4
-      rect:
-        serializedVersion: 2
-        x: 1634
-        y: 0
-        width: 366
-        height: 500
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0, y: 0}
   spritePackingTag: 
   userData: 

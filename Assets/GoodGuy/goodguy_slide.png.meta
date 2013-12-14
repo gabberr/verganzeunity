@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 83e32ee57336a384494a8352dae43fca
+guid: e03798ef26bdd2e488f59118afc6d58b
 TextureImporter:
   serializedVersion: 2
   mipmaps:
@@ -41,50 +41,32 @@ TextureImporter:
   buildTargetSettings: []
   spriteSheet:
     sprites:
-    - name: goodguy_running_0
+    - name: goodguy_slide_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 364.429993
+        width: 365
         height: 500
       alignment: 0
-      pivot: {x: .5, y: .5}
-    - name: goodguy_running_1
+      pivot: {x: 0, y: 0}
+    - name: goodguy_slide_1
       rect:
         serializedVersion: 2
-        x: 407
+        x: 408
         y: 0
-        width: 367
-        height: 500
+        width: 366
+        height: 411
       alignment: 0
-      pivot: {x: .5, y: .5}
-    - name: goodguy_running_2
+      pivot: {x: 0, y: 0}
+    - name: goodguy_slide_2
       rect:
         serializedVersion: 2
         x: 817
         y: 0
-        width: 366
+        width: 365
         height: 500
       alignment: 0
-      pivot: {x: .5, y: .5}
-    - name: goodguy_running_3
-      rect:
-        serializedVersion: 2
-        x: 1226
-        y: 0
-        width: 367
-        height: 500
-      alignment: 0
-      pivot: {x: .5, y: .5}
-    - name: goodguy_running_4
-      rect:
-        serializedVersion: 2
-        x: 1634
-        y: 0
-        width: 366
-        height: 500
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0, y: 0}
   spritePackingTag: 
   userData: 
