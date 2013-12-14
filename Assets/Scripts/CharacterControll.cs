@@ -6,9 +6,6 @@ using System.Collections.Generic;
 
 public class CharacterControll : MonoBehaviour {
 
-
-
-
 	//jump and crouch variables
 	CharacterController controller;
 	public float speed = 7f;
@@ -27,7 +24,16 @@ public class CharacterControll : MonoBehaviour {
 	bool speedBoosted = false;
 	float speedTimer = 2f;
 
-
+	//fields for determing the characters moving direction
+	private float previousCharacterDistance;
+	private float currentCharacterDistance;
+	
+	//fields for controlling the camera's zoom
+	public float camZOOMFactor = 6f;
+	
+	//references to other game objects
+	public GameObject badGuyReference;
+	public Camera cameraReference;
 
 
 	//game Start game Over
@@ -35,13 +41,17 @@ public class CharacterControll : MonoBehaviour {
 
 	
 	void Start(){
+		print (cameraReference.orthographicSize);
+	}
 
+	void FixedUpdate() {
+		currentCharacterDistance = Vector3.Distance(transform.position, badGuyReference.transform.position);
 
 	}
 
 
 	void  Update (){
-
+		print (cameraReference.orthographicSize);
 		shots.guiText.text = "Tequila: " + tequilaShots;
 		CharacterController controller = GetComponent<CharacterController>();
 
@@ -83,6 +93,24 @@ public class CharacterControll : MonoBehaviour {
 				tequilaShots = tequilaShots - 1;
 			}
 				
+		}
+
+		previousCharacterDistance = Vector3.Distance(transform.position, badGuyReference.transform.position);
+		
+		if(currentCharacterDistance - previousCharacterDistance > 0){
+			//the player is moving to the right direction
+			if(currentCharacterDistance < 50f && currentCharacterDistance > 10f){
+				cameraReference.orthographicSize = Mathf.Lerp(previousCharacterDistance, currentCharacterDistance, .01f);
+			}
+			//cameraReference.transform.transform.Translate(Vector3.forward * (currentCharacterDistance/camZOOMFactor) * Time.deltaTime);
+			//Debug.Log("gets Closer! othographic size = " + cameraReference.orthographicSize);
+		}else if(currentCharacterDistance - previousCharacterDistance < 0){
+			//the player is moving to the left direction
+			if(currentCharacterDistance < 50f && currentCharacterDistance > 10f){
+				cameraReference.orthographicSize = Mathf.Lerp(currentCharacterDistance, previousCharacterDistance, .01f);
+			}
+			//cameraReference.orthographicSize = cameraReference.orthographicSize * (currentCharacterDistance/camZOOMFactor);
+			//cameraReference.transform.transform.Translate(-Vector3.forward * (currentCharacterDistance/camZOOMFactor) * Time.deltaTime);
 		}
 
 }
