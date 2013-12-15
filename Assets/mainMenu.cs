@@ -2,10 +2,12 @@
 using System.Collections;
 
 public class mainMenu : MonoBehaviour {
+	public Texture2D menuImage;
 
 	void OnGUI () {
-		// Make a background box
-		if (GUI.Button (new Rect (Screen.width/2,Screen.height/2,150,100), "play")) {
+		GUI.Box (new Rect (0,0,Screen.width,Screen.height), menuImage);
+
+		if (GUI.Button (new Rect (Screen.width - 150, 20,107, 43), "")) {
 			Application.LoadLevel(1);
 		}
 	}
