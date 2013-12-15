@@ -3,7 +3,7 @@
 --- !u!29 &1
 SceneSettings:
   m_ObjectHideFlags: 0
-  m_PVSData:
+  m_PVSData: 
   m_PVSObjectsArray: []
   m_PVSPortalsArray: []
   m_OcclusionBakeSettings:
@@ -524,6 +524,7 @@ GameObject:
   - 4: {fileID: 798975014}
   - 114: {fileID: 798975016}
   - 143: {fileID: 798975015}
+  - 95: {fileID: 798975018}
   - 212: {fileID: 798975017}
   m_Layer: 0
   m_Name: Player
@@ -576,6 +577,11 @@ MonoBehaviour:
   standHight: 2
   speedBoost: 1
   shots: {fileID: 1676500246}
+  camZOOMFactor: 6
+  badGuyReference: {fileID: 1340070672}
+  cameraReference: {fileID: 759524420}
+  gameOverDistance: 0
+--- !u!212 &798975017
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -598,6 +604,20 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_Sprite: {fileID: 21300000, guid: 83e32ee57336a384494a8352dae43fca, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!95 &798975018
+Animator:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 798975013}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: cbd4bba308e582c48a731a9f894e3c22, type: 2}
+  m_CullingMode: 1
+  m_ApplyRootMotion: 0
+  m_AnimatePhysics: 1
+  m_HasTransformHierarchy: 1
 --- !u!1 &944933197
 GameObject:
   m_ObjectHideFlags: 0
@@ -1645,7 +1665,7 @@ Transform:
   m_GameObject: {fileID: 2008547457}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 40, y: 1, z: 1}
+  m_LocalScale: {x: 200, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
 --- !u!54 &2008547462
