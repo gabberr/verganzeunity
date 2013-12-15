@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: e03798ef26bdd2e488f59118afc6d58b
+guid: a2ecba5b054e5784ba7a08abfbc835b5
 TextureImporter:
   serializedVersion: 2
   mipmaps:
@@ -35,38 +35,47 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: .5, y: .5}
-  spritePixelsToUnits: 300
+  spritePixelsToUnits: 140
   alphaIsTransparency: 1
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
     sprites:
-    - name: goodguy_slide_0
+    - name: mexican_goodguy_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 365
-        height: 500
+        width: 195
+        height: 238
       alignment: 0
-      pivot: {x: .5, y: .5}
-    - name: goodguy_slide_1
+      pivot: {x: 0, y: 0}
+    - name: mexican_goodguy_1
       rect:
         serializedVersion: 2
-        x: 408
+        x: 259
         y: 0
-        width: 366
-        height: 435
+        width: 195
+        height: 238
       alignment: 0
-      pivot: {x: .5, y: .5}
-    - name: goodguy_slide_2
+      pivot: {x: 0, y: 0}
+    - name: mexican_goodguy_2
       rect:
         serializedVersion: 2
-        x: 817
+        x: 518
         y: 0
-        width: 365
-        height: 500
+        width: 185
+        height: 238
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0, y: 0}
+    - name: mexican_goodguy_3
+      rect:
+        serializedVersion: 2
+        x: 777
+        y: 0
+        width: 174
+        height: 238
+      alignment: 0
+      pivot: {x: 0, y: 0}
   spritePackingTag: 
   userData: 

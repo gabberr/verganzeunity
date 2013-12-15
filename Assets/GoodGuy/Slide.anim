@@ -5,7 +5,7 @@ AnimationClip:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Run
+  m_Name: Slide
   serializedVersion: 4
   m_AnimationType: 2
   m_Compressed: 0
@@ -18,15 +18,9 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 21300000, guid: 83e32ee57336a384494a8352dae43fca, type: 3}
-    - time: .100000001
-      value: {fileID: 21300004, guid: 83e32ee57336a384494a8352dae43fca, type: 3}
-    - time: .200000003
-      value: {fileID: 21300002, guid: 83e32ee57336a384494a8352dae43fca, type: 3}
-    - time: .300000012
-      value: {fileID: 21300006, guid: 83e32ee57336a384494a8352dae43fca, type: 3}
-    - time: .433333337
-      value: {fileID: 21300000, guid: 83e32ee57336a384494a8352dae43fca, type: 3}
+      value: {fileID: 21300002, guid: e03798ef26bdd2e488f59118afc6d58b, type: 3}
+    - time: .5
+      value: {fileID: 21300002, guid: e03798ef26bdd2e488f59118afc6d58b, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -39,7 +33,7 @@ AnimationClip:
   m_AnimationClipSettings:
     serializedVersion: 2
     m_StartTime: 0
-    m_StopTime: .450000018
+    m_StopTime: .516666651
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0

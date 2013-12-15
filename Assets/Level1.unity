@@ -294,10 +294,10 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 798975014}
-  - 114: {fileID: 798975016}
   - 143: {fileID: 798975015}
   - 95: {fileID: 798975018}
   - 212: {fileID: 798975017}
+  - 114: {fileID: 798975016}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -385,7 +385,7 @@ Animator:
   m_GameObject: {fileID: 798975013}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: cbd4bba308e582c48a731a9f894e3c22, type: 2}
+  m_Controller: {fileID: 9100000, guid: 89c0e8b6874bb7e4480eeeac0a2cb1a4, type: 2}
   m_CullingMode: 1
   m_ApplyRootMotion: 0
   m_AnimatePhysics: 1

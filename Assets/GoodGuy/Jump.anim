@@ -18,11 +18,11 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 21300000, guid: 732e7bf877aad574eb8c618f338efae8, type: 3}
-    - time: .0500000007
       value: {fileID: 21300002, guid: 732e7bf877aad574eb8c618f338efae8, type: 3}
-    - time: .5
+    - time: 1.35000002
       value: {fileID: 21300002, guid: 732e7bf877aad574eb8c618f338efae8, type: 3}
+    - time: 1.38333333
+      value: {fileID: 21300002, guid: 83e32ee57336a384494a8352dae43fca, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -35,7 +35,7 @@ AnimationClip:
   m_AnimationClipSettings:
     serializedVersion: 2
     m_StartTime: 0
-    m_StopTime: .516666651
+    m_StopTime: 1.39999998
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -52,7 +52,7 @@ AnimationClip:
   m_EditorCurves: []
   m_EulerEditorCurves: []
   m_Events:
-  - time: .483333319
+  - time: 1.35000002
     functionName: 
     data: 
     objectReferenceParameter: {fileID: 0}

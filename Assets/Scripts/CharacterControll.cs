@@ -16,14 +16,20 @@ public class CharacterControll : MonoBehaviour {
 	public float crouchHeight = 1f;
 	public float standHight = 2f;
 	bool  isCrouched = false;
-	private Animator animator;
+
+
+
+
+	//Animations
+	protected Animator animator;
+
 
 	//Tequila speed boost
 	public float speedBoost = 1f;
 	private int tequilaShots;
 	public GUIText shots;
 	bool speedBoosted = false;
-	float speedTimer = 2f;
+	float speedTimer = 1f;
 
 
 	//fields for determing the characters moving direction
@@ -54,6 +60,10 @@ public class CharacterControll : MonoBehaviour {
 
 
 	void  Update (){
+
+
+
+
 		checkGameOver();
 
 		shots.guiText.text = "Tequila: " + tequilaShots;
@@ -64,19 +74,27 @@ public class CharacterControll : MonoBehaviour {
 		moveDirection.y -= gravity * Time.deltaTime;
 		controller.Move(moveDirection * Time.deltaTime);
 
+		if (controller.isGrounded && isCrouched == false) {
+			animator.SetBool("boolJump", false);	
+				}
+
 		if (Input.GetKeyDown(KeyCode.Space) && isCrouched == false && controller.isGrounded)
 			{
-				
-			Jump();
+
+			animator.SetBool("boolJump", true);
+
+			moveDirection.y = jumpSpeed;
 
 						
 			}
 		if (Input.GetKeyDown (KeyCode.LeftControl)) {
+					animator.SetBool("boolSlide", true);
 					controller.center = new Vector2(0, -0.3f);
 					controller.height = crouchHeight;
 					isCrouched = true;
 				}
 		if (Input.GetKeyUp (KeyCode.LeftControl) && isCrouched == true){
+				animator.SetBool("boolSlide", false);
 				controller.center = new Vector2(0, 0.2f);
 			   	controller.height = standHight;
 				isCrouched = false;
@@ -120,6 +138,7 @@ public class CharacterControll : MonoBehaviour {
 		if (speedBoosted == true) {
 			speedTimer -= Time.deltaTime;
 			if(speedTimer <= 0){
+				animator.SetBool("boolDrinking", false);
 				speedBoosted = false;
 				speed = speed - speedBoost;
 				speedTimer = 2f;
@@ -129,6 +148,7 @@ public class CharacterControll : MonoBehaviour {
 			
 			if(tequilaShots > 0)
 			{
+				animator.SetBool("boolDrinking", true);
 				speedBoosted = true;
 				speed = speed + speedBoost;
 				tequilaShots = tequilaShots - 1;
@@ -145,10 +165,7 @@ public class CharacterControll : MonoBehaviour {
 			print("Game over dist: "+currentCharacterDistance + "(> "+gameOverDistance+")");
 		}
 	}
-	void Jump()
-	{
-		moveDirection.y = jumpSpeed;
-	}
+
 
 }
 

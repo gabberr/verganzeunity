@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: e03798ef26bdd2e488f59118afc6d58b
+guid: 43de037ba61fe0540b70a05b144de3e8
 TextureImporter:
   serializedVersion: 2
   mipmaps:
@@ -35,38 +35,47 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: .5, y: .5}
-  spritePixelsToUnits: 300
+  spritePixelsToUnits: 140
   alphaIsTransparency: 1
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
     sprites:
-    - name: goodguy_slide_0
+    - name: badGuy_shoot_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 365
-        height: 500
+        width: 173
+        height: 249
       alignment: 0
-      pivot: {x: .5, y: .5}
-    - name: goodguy_slide_1
+      pivot: {x: 0, y: 0}
+    - name: badGuy_shoot_1
       rect:
         serializedVersion: 2
-        x: 408
+        x: 192
         y: 0
-        width: 366
-        height: 435
+        width: 182
+        height: 249
       alignment: 0
       pivot: {x: .5, y: .5}
-    - name: goodguy_slide_2
+    - name: badGuy_shoot_2
       rect:
         serializedVersion: 2
-        x: 817
+        x: 403
         y: 0
-        width: 365
-        height: 500
+        width: 194
+        height: 249
       alignment: 0
       pivot: {x: .5, y: .5}
+    - name: badGuy_shoot_3
+      rect:
+        serializedVersion: 2
+        x: 615
+        y: 0
+        width: 174
+        height: 249
+      alignment: 0
+      pivot: {x: 0, y: 0}
   spritePackingTag: 
   userData: 
