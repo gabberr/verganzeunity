@@ -16,6 +16,7 @@ public class CharacterControll : MonoBehaviour {
 	public float crouchHeight = 1f;
 	public float standHight = 2f;
 	bool  isCrouched = false;
+	private Animator animator;
 
 	//Tequila speed boost
 	public float speedBoost = 1f;
@@ -41,7 +42,9 @@ public class CharacterControll : MonoBehaviour {
 
 	
 	void Start(){
+		animator = GetComponent<Animator>();
 		gameOverDistance = 25;
+
 	}
 
 	/*void FixedUpdate() {
@@ -63,16 +66,18 @@ public class CharacterControll : MonoBehaviour {
 
 		if (Input.GetKeyDown(KeyCode.Space) && isCrouched == false && controller.isGrounded)
 			{
-				moveDirection.y = jumpSpeed;
+				
+			Jump();
+
 						
 			}
 		if (Input.GetKeyDown (KeyCode.LeftControl)) {
-					controller.center = new Vector2(0, 0);
+					controller.center = new Vector2(0, -0.3f);
 					controller.height = crouchHeight;
 					isCrouched = true;
 				}
 		if (Input.GetKeyUp (KeyCode.LeftControl) && isCrouched == true){
-				controller.center = new Vector2(0, 0.5f);
+				controller.center = new Vector2(0, 0.2f);
 			   	controller.height = standHight;
 				isCrouched = false;
 			}
@@ -139,6 +144,10 @@ public class CharacterControll : MonoBehaviour {
 		if(currentCharacterDistance > gameOverDistance){
 			print("Game over dist: "+currentCharacterDistance + "(> "+gameOverDistance+")");
 		}
+	}
+	void Jump()
+	{
+		moveDirection.y = jumpSpeed;
 	}
 
 }
