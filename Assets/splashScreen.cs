@@ -8,7 +8,7 @@ public class splashScreen : MonoBehaviour {
 	void OnGUI () {
 		// Make a background box
 		if (GUI.Button (new Rect (Screen.width/2,Screen.height/2,150,100), logoImage)) {
-			Application.LoadLevel(1);
+			Application.LoadLevel(2);
 		}
 	}
 }
