@@ -6,6 +6,7 @@ using System.Collections.Generic;
 
 public class CharacterControll : MonoBehaviour {
 
+	//
 	//jump and crouch variables
 	CharacterController controller;
 	public float speed = 7f;
