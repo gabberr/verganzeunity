@@ -101,6 +101,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22d46b1f3e3254ed09d25f54c0ffd7ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  menuImage: {fileID: 2800000, guid: b996fa53489204708b9c7684a212fba6, type: 3}
 --- !u!4 &178927167
 Transform:
   m_ObjectHideFlags: 0
@@ -161,7 +162,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: .192156866, g: .301960796, b: .474509805, a: .0196078438}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: .0196078438}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
